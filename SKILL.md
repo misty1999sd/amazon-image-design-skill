@@ -54,18 +54,11 @@ Analyze product inputs for:
 - Selling points that can become visual scenes. Extract 10 visual themes, each with one core message, ordered by shopper browsing logic, avoiding vague or overpacked claims.
 - Reference-image style: visual mood, background type, lighting direction, color palette, composition, typography hierarchy, product placement, information layout, borrowable principles, and elements that must not be copied such as brands, logos, exact text, or distinctive layout.
 
-Default 10-image gallery structure:
+Build the 10-image gallery structure adaptively for each product. Do not force every product into a fixed sequence. Choose image roles from the product's category, selling points, user objections, usage journey, and competitive context.
 
-1. Main image: white background, full product, no text/icons/watermarks/complex background, product clear and dominant.
-2. Core benefit overview: show the most important 3-5 benefits with concise hierarchy.
-3. Core function: strongest function with close-up, arrow, label, or contextual demonstration.
-4. Usage scene: product in a realistic environment so shoppers understand how it is used.
-5. Detail close-up: material, craft, interface, texture, structure, button, edge, or finish.
-6. Size/spec image: dimensions, capacity, weight, compatibility, or scale, clear but not crowded.
-7. Comparison/advantage: compare with ordinary products, old version, or common pain points without exaggeration.
-8. Pain-point solution: show before/after or problem/solution difference truthfully.
-9. Package/accessory/list image: show exactly what the buyer receives.
-10. Brand-quality closing image: premium, clean, trust-building final image.
+Possible image roles include: main image, benefit overview, core function, usage scene, detail close-up, size/spec image, compatibility/fit image, comparison, pain-point solution, package/accessory list, how-to/use steps, trust/safety proof, variant/color explanation, gift/use occasion, brand-quality closing image, or any product-specific role that better fits the item.
+
+The first image should usually be an Amazon-compliant main image unless the user explicitly asks for a non-listing concept board. The remaining 9 images should be reordered and redefined around conversion logic rather than template order.
 
 The 10-grid master must be one horizontal `2:1` composition with 10 evenly arranged cells, clean spacing between cells, unified style, and no content crossing cell boundaries. Each cell must remain a complete image that can later be split into an independent Amazon gallery image without cutting off product, text, or key information.
 
