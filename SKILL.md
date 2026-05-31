@@ -1,6 +1,6 @@
 ---
 name: amazon-image-design
-description: Amazon listing image and ecommerce graphic design workflow. Use when the user asks to design, plan, generate, revise, or analyze Amazon product images, listing image sets, main images, lifestyle images, infographics, comparison images, A+ visuals, ecommerce product photos, 10-grid hero master boards, 1:1 / 1600x2000 / 2K product image outputs, or AI image generation prompts for Amazon visuals.
+description: Amazon listing image and ecommerce graphic design workflow. Use when the user asks to design, plan, generate, revise, or analyze Amazon product images, listing image sets, main images, lifestyle images, infographics, comparison images, A+ visuals, ecommerce product photos, 1:1 / 1600x2000 / 2K product image outputs, or AI image generation prompts for Amazon visuals.
 ---
 
 # Amazon Image Design
@@ -42,37 +42,14 @@ When references or links are provided:
 
 When browsing competitors, identify repeated category conventions but avoid producing a near-copy of a competitor's image.
 
-## 10-Grid Master Planning
+## Additional Constraints
 
-When the user provides product multi-view images, selling points, and reference images, act as a senior Amazon visual strategist, ecommerce conversion designer, product photography director, and AI image generation director. Build a complete 10-image Amazon gallery plan and a final `2:1` 10-grid hero master prompt.
-
-Do not repeatedly ask for missing information. If inputs are incomplete, make reasonable plans from the available materials and state assumptions only when they affect fidelity or compliance.
-
-Analyze product inputs for:
-
-- Product category, exterior features, core structure, material/texture, main colors, best camera angles, non-changeable identifiers, and details that must stay consistent across all images.
-- Selling points that can become visual scenes. Extract 10 visual themes, each with one core message, ordered by shopper browsing logic, avoiding vague or overpacked claims.
-- Reference-image style: visual mood, background type, lighting direction, color palette, composition, typography hierarchy, product placement, information layout, borrowable principles, and elements that must not be copied such as brands, logos, exact text, or distinctive layout.
-
-Build the 10-image gallery structure adaptively for each product. Do not force every product into a fixed sequence. Choose image roles from the product's category, selling points, user objections, usage journey, and competitive context.
-
-Possible image roles include: main image, benefit overview, core function, usage scene, detail close-up, size/spec image, compatibility/fit image, comparison, pain-point solution, package/accessory list, how-to/use steps, trust/safety proof, variant/color explanation, gift/use occasion, brand-quality closing image, or any product-specific role that better fits the item.
-
-The first image should usually be an Amazon-compliant main image unless the user explicitly asks for a non-listing concept board. The remaining 9 images should be reordered and redefined around conversion logic rather than template order.
-
-The 10-grid master must be one horizontal `2:1` composition with 10 evenly arranged cells, clean spacing between cells, unified style, and no content crossing cell boundaries. Each cell must remain a complete image that can later be split into an independent Amazon gallery image without cutting off product, text, or key information.
-
-For 10-grid planning requests, output in this structure:
-
-1. Product analysis
-2. Reference image style analysis
-3. Overall visual direction
-4. 10-image planning table with columns: image number, image type, core purpose, visual content, product placement, background design, text information, composition, notes
-5. Unified style rules
-6. Final 10-grid master generation prompt
-7. Follow-up split prompts
-
-Always avoid inventing nonexistent product functions, changing the real product appearance, copying reference brands/logos/text, and absolute ad claims such as "best", "No. 1", or "100% effective".
+- Do not invent product functions, included items, compatibility, materials, certifications, or performance claims that the user did not provide.
+- Do not change the product's real appearance, structure, color, proportions, labels, logos, printed text, or functional details.
+- Do not copy brands, logos, text, characters, distinctive layouts, or other protected elements from reference images or competitor listings.
+- Do not use absolute or unverifiable ad claims such as "best", "No. 1", "100% effective", "guaranteed", or equivalent wording unless the user provides substantiation and marketplace suitability.
+- For Amazon main images, keep the image as close as possible to Amazon main-image rules: white background, product only, no text, no icons, no watermarks, and no complex scene.
+- If product information is incomplete, make the best reasonable plan from provided materials and avoid repeated questioning; ask only when the missing information would make the output unusable.
 
 ## Asset Handling
 
