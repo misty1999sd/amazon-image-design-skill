@@ -51,6 +51,13 @@ When browsing competitors, identify repeated category conventions but avoid prod
 - Do not upscale in a way that invents new product labels, textures, edges, buttons, ports, stitching, or printed words.
 - Keep a clean naming convention when saving outputs, such as `01-main-2000x2000.jpg`, `02-lifestyle-1600x2000.png`, or the user's naming scheme.
 
+## Image Generation Tooling
+
+- When the user asks to generate, create, render, or output final Amazon product images, use GPT-image 2 or the available GPT image generation/editing tool.
+- Do not use code-generated drawings, CSS/HTML mockups, SVG placeholders, canvas renders, chart scripts, or simple programmatic compositions as final ecommerce image outputs.
+- Code may be used only for auxiliary tasks such as inspecting dimensions, organizing files, converting formats, compressing copies, or deterministic post-processing after real image generation/editing.
+- If GPT-image 2 or an equivalent image generation/editing tool is unavailable, state the blocker clearly instead of producing a fake final image through code.
+
 ## Design Principles
 
 - Prefer scene-based, immersive images over stacked selling points.
