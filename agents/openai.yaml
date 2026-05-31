@@ -1,0 +1,3 @@
+display_name: Amazon Image Design
+short_description: Amazon listing image design workflow
+default_prompt: Design Amazon listing images from product materials, references, or requirements while preserving product fidelity and meeting marketplace constraints.
