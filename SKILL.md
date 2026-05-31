@@ -1,6 +1,6 @@
 ---
 name: amazon-image-design
-description: Amazon listing image and ecommerce graphic design workflow. Use when the user asks to design, plan, generate, revise, or analyze Amazon product images, listing image sets, main images, lifestyle images, infographics, comparison images, A+ visuals, ecommerce product photos, or 1:1 / 1600x2000 / 2K product image outputs.
+description: Amazon listing image and ecommerce graphic design workflow. Use when the user asks to design, plan, generate, revise, or analyze Amazon product images, listing image sets, main images, lifestyle images, infographics, comparison images, A+ visuals, ecommerce product photos, 10-grid hero master boards, 1:1 / 1600x2000 / 2K product image outputs, or AI image generation prompts for Amazon visuals.
 ---
 
 # Amazon Image Design
@@ -41,6 +41,45 @@ When references or links are provided:
 4. Propose an original direction with its own layout, copy hierarchy, scene, and visual rhythm.
 
 When browsing competitors, identify repeated category conventions but avoid producing a near-copy of a competitor's image.
+
+## 10-Grid Master Planning
+
+When the user provides product multi-view images, selling points, and reference images, act as a senior Amazon visual strategist, ecommerce conversion designer, product photography director, and AI image generation director. Build a complete 10-image Amazon gallery plan and a final `2:1` 10-grid hero master prompt.
+
+Do not repeatedly ask for missing information. If inputs are incomplete, make reasonable plans from the available materials and state assumptions only when they affect fidelity or compliance.
+
+Analyze product inputs for:
+
+- Product category, exterior features, core structure, material/texture, main colors, best camera angles, non-changeable identifiers, and details that must stay consistent across all images.
+- Selling points that can become visual scenes. Extract 10 visual themes, each with one core message, ordered by shopper browsing logic, avoiding vague or overpacked claims.
+- Reference-image style: visual mood, background type, lighting direction, color palette, composition, typography hierarchy, product placement, information layout, borrowable principles, and elements that must not be copied such as brands, logos, exact text, or distinctive layout.
+
+Default 10-image gallery structure:
+
+1. Main image: white background, full product, no text/icons/watermarks/complex background, product clear and dominant.
+2. Core benefit overview: show the most important 3-5 benefits with concise hierarchy.
+3. Core function: strongest function with close-up, arrow, label, or contextual demonstration.
+4. Usage scene: product in a realistic environment so shoppers understand how it is used.
+5. Detail close-up: material, craft, interface, texture, structure, button, edge, or finish.
+6. Size/spec image: dimensions, capacity, weight, compatibility, or scale, clear but not crowded.
+7. Comparison/advantage: compare with ordinary products, old version, or common pain points without exaggeration.
+8. Pain-point solution: show before/after or problem/solution difference truthfully.
+9. Package/accessory/list image: show exactly what the buyer receives.
+10. Brand-quality closing image: premium, clean, trust-building final image.
+
+The 10-grid master must be one horizontal `2:1` composition with 10 evenly arranged cells, clean spacing between cells, unified style, and no content crossing cell boundaries. Each cell must remain a complete image that can later be split into an independent Amazon gallery image without cutting off product, text, or key information.
+
+For 10-grid planning requests, output in this structure:
+
+1. Product analysis
+2. Reference image style analysis
+3. Overall visual direction
+4. 10-image planning table with columns: image number, image type, core purpose, visual content, product placement, background design, text information, composition, notes
+5. Unified style rules
+6. Final 10-grid master generation prompt
+7. Follow-up split prompts
+
+Always avoid inventing nonexistent product functions, changing the real product appearance, copying reference brands/logos/text, and absolute ad claims such as "best", "No. 1", or "100% effective".
 
 ## Asset Handling
 
