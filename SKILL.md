@@ -67,6 +67,14 @@ When browsing competitors, identify repeated category conventions but avoid prod
 - Code may be used only for auxiliary tasks such as inspecting dimensions, organizing files, converting formats, compressing copies, or deterministic post-processing after real image generation/editing.
 - If GPT-image 2 or an equivalent image generation/editing tool is unavailable, state the blocker clearly instead of producing a fake final image through code.
 
+### Local Image API Profile
+
+- If `$CODEX_HOME/.sandbox-secrets/image-generation.env` exists, treat it as the user's explicit opt-in to the bundled image-generation CLI/API path and use it by default for generation and editing.
+- Load the profile without displaying its contents. Scope `OPENAI_API_KEY` and `OPENAI_BASE_URL` to the image-generation process only; do not modify Codex model-provider or runtime configuration.
+- Invoke `$CODEX_HOME/skills/.system/imagegen/scripts/image_gen.py` directly with `gpt-image-2` unless the user requests another supported image model.
+- Use `2048x2048` as the configured square default and `high` quality for final images. Keep `1600x2000` for the established Amazon vertical format, and honor any explicit user size.
+- Do not create a wrapper, proxy, shim, or replacement executable around the bundled image-generation script.
+
 ## Design Principles
 
 - Prefer scene-based, immersive images over stacked selling points.
