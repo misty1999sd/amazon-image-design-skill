@@ -85,6 +85,61 @@ When browsing competitors, identify repeated category conventions but avoid prod
 - Choose colors and type to support product positioning and shopper psychology, not decoration.
 - Make mobile readability a primary constraint: large headline, clean spacing, high contrast.
 
+## Gallery Narrative And Decision Frameworks
+
+Treat a listing gallery as a progressive argument, not a pile of features. Use one primary framework to set the gallery order and use FABE (Feature -> Advantage -> Benefit -> Evidence) inside individual selling-point images. Do not force every framework into one gallery.
+
+### Choose A Primary Framework
+
+- **AIDA (Attention -> Interest -> Desire -> Action):** the default for most products. Move from product recognition, to relevant use, to desired outcome, to decision support.
+- **PAS (Problem -> Agitate -> Solution):** use for products bought to remove a clear pain point. Keep the problem truthful and avoid fear-based exaggeration.
+- **BAB (Before -> After -> Bridge):** use when the value is a visible transformation, such as organization, cleaning, beauty, or workflow improvement.
+- **JTBD (Situation -> Job -> Barrier -> Product -> Outcome):** use when the product is selected for a specific task or routine. Start with the user's situation rather than the product specification.
+- **Awareness stages:** identify whether shoppers are problem-aware, solution-aware, product-aware, or ready to buy. Educate the category only when the audience is not already solution-aware; otherwise spend gallery space on differentiation and objection handling.
+- **Learn -> Feel -> Do:** use for products that require both rational understanding and emotional preference. Alternate mechanism/specification proof with lifestyle and outcome imagery.
+- **StoryBrand or PASTOR:** use for premium, complex, or high-consideration products. Make the shopper the protagonist, explain the obstacle and solution, then close with proof, fit, and a low-risk next step.
+
+Use one primary framework plus at most one supporting framework. For example, use JTBD to decide the story and FABE to explain the core mechanism. Use social proof, authority, specificity, and objection handling as evidence modules, not as a substitute for a gallery sequence.
+
+### Default Seven-Image Progression
+
+Adapt the number of images to the category and available assets, but preserve the decision order:
+
+1. **Main image - What is it?** Show the actual product clearly on pure white, with no text or promotional graphics. The product should occupy about 85% or more of the frame and only included items may appear.
+2. **Hero lifestyle - What outcome can I expect?** Show the product in a credible use situation and make the desired result immediately visible. This is the Interest/Desire or JTBD situation-to-outcome step.
+3. **Problem and solution - Why do I need it?** Use PAS or BAB to show one real pain point and the product's role in resolving it. Keep the scene and copy focused on one problem.
+4. **Core benefit - Why does it work for me?** Apply FABE: state one benefit-led headline, show the relevant feature, explain its practical advantage, and include visual or factual evidence.
+5. **Mechanism or detail - Can I believe the claim?** Use a close-up, cutaway, use step, material detail, or measured result. Only show details that exist in the source product and can support the claim.
+6. **Fit and objections - Is it right for my situation?** Address size, capacity, compatibility, installation, care, limitations, comparison, or common review/Q&A concerns. State boundaries clearly instead of implying universal suitability.
+7. **Decision close - What exactly will I receive?** Show included items, package contents, usage steps, warranty or trust information only when substantiated, and a clear brand-consistent close. Do not add accessories or certifications that are not included or documented.
+
+For an eight-image gallery, add a separate comparison/trust image between the objection image and the decision close. For a high-consideration product, split the mechanism and fit images rather than adding more repeated feature callouts.
+
+### Image-Level Proof Pattern
+
+Every secondary image should be understandable on its own because shoppers may enter the gallery at any position. Keep this compact pattern:
+
+**Benefit headline -> visual proof -> specific qualifier.**
+
+Use FABE only when a feature needs translation. Avoid repeating the same feature in multiple images, stacking badges, or turning a single image into a full bullet list. Prefer concrete measurements, visible structure, demonstrated use, and test conditions over vague adjectives such as "premium" or "powerful."
+
+### Product-Type Selection Rules
+
+- **Commodity or crowded category:** AIDA plus awareness-stage differentiation; establish the category quickly, then show the clearest meaningful difference.
+- **Pain-point product:** PAS or BAB plus FABE; make the problem and the visible improvement easy to compare.
+- **Lifestyle or emotional product:** JTBD plus StoryBrand; show identity, routine, and desired experience before technical detail.
+- **Technical or high-ticket product:** Learn -> Feel -> Do or PASTOR; explain the mechanism, prove it, then handle fit and risk objections.
+- **Multi-size or compatibility-sensitive product:** AIDA plus an explicit fit/objection image; do not bury measurements in decorative scenes.
+
+### Amazon Constraints On The Narrative
+
+- Sequence cannot override marketplace rules: the main image remains product-only, pure white RGB `255, 255, 255`, with no text, icons, borders, watermarks, ratings, or unverified props.
+- Secondary images may use scenes, callouts, comparison, size charts, and steps, but each claim must be truthful, legible at mobile thumbnail size, and visually supported.
+- Keep one dominant message per image, use short benefit-led copy, and preserve generous spacing and contrast.
+- Treat the source product image as the locked truth. Do not alter its shape, color, proportions, labels, printed text, materials, ports, seams, buttons, or included parts to make the narrative more attractive.
+- If a claim, certification, compatibility statement, performance number, or package item cannot be verified, omit it or flag it for substantiation before production.
+- Before delivery, check the complete gallery for logical progression as well as exact pixel dimensions, product fidelity, text spelling, claim safety, and Amazon category requirements.
+
 ## Product Fidelity Rules
 
 Product fidelity is the highest priority. If the user's source product image is provided:
