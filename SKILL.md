@@ -15,6 +15,12 @@ Before designing Amazon listing images, read `references/amazon-image-requiremen
 - The user asks for compliance, marketplace requirements, or "Amazon rules".
 - The category is unclear or may have special image rules.
 
+Read `references/product-fidelity-banana-workflow.md` and use `scripts/check_palette.py` when:
+
+- The image must reproduce a real product with near-photographic fidelity.
+- The user reports a specific defect on an existing image, such as a colour cast, a part that is too thick or too thin, wrong shading, wrong corner geometry, or a framing problem.
+- The final output must be a native-size model generation with no local retouching.
+
 Use web research when the user gives a product category, competitor link, reference link, or asks for market-based direction. Prefer Amazon pages, Seller Central/help/forum sources, competitor listings, Q&A, and reviews. Summarize findings; do not copy competitor layouts.
 
 For final upload-critical work, verify current marketplace and category guidance online because Amazon requirements and enforcement can change.
@@ -66,6 +72,13 @@ When browsing competitors, identify repeated category conventions but avoid prod
 - Do not use code-generated drawings, CSS/HTML mockups, SVG placeholders, canvas renders, chart scripts, or simple programmatic compositions as final ecommerce image outputs.
 - Code may be used only for auxiliary tasks such as inspecting dimensions, organizing files, converting formats, compressing copies, or deterministic post-processing after real image generation/editing.
 - If GPT-image 2 or an equivalent image generation/editing tool is unavailable, state the blocker clearly instead of producing a fake final image through code.
+
+### Provider Routing
+
+- No visible text anywhere in the final image and reference fidelity matters -> use the Banana profile: `nano-banana-pro` first, then `nano-banana-2.1`, then `nano-banana-2`.
+- Any visible text, typography, label, caption or packaging copy in the final image -> use `gpt-image-2`, even when reference fidelity also matters. Text accuracy outranks reference fidelity.
+- `gpt-image-2` stays the default for text-to-image concept work, aesthetic exploration and text-bearing designs.
+- Name the chosen provider and the one-line reason before generating. Do not silently downgrade a model, and do not switch provider mid-task without saying why.
 
 ### Local Image API Profile
 
@@ -151,6 +164,17 @@ Product fidelity is the highest priority. If the user's source product image is 
 - If generation/editing changes the product shape, color, markings, or text, treat the output as failed and revise.
 - When product text must remain exact, prefer image editing/compositing workflows using the provided product asset over pure text-to-image generation.
 
+## Reference-Locked Rebuild Workflow
+ the deliverable must look like the client's real product, follow `references/product-fidelity-banana-workflow.md`. Its non-negotiables:
+
+- One generation changes one attribute. Never bundle a geometry fix with a colour fix; combined instructions fail both.
+- Prefer a neutral base image. A casted base is inherited by the next pass and usually amplified, so repair a cast by rebuilding from a neutral source rather than by editing the cast away.
+- Convert every prohibition into a preserved named feature or a measurable quantity in pixels and ratios. Negative phrasing such as `no rounded corners` is weakly obeyed.
+- Send at most three references: one structure truth, one detail close-up, optionally one already-approved render. More references cause drift, and a mirrored view mirrors the whole product.
+- Run `scripts/check_palette.py` on every candidate and pass the numeric gate before delivery: green deficit within +-2, `R - B` within +-2.5, border pure-white share >= 0.99, nothing clipped by the frame, true-black ratio >= 0.008, and the exact requested native canvas size.
+- If the client bans local editing, deliver only the model's native full-frame output. No resizing, colour correction, compositing, retouching or format re-encode as a design step.
+- Report the measured values for the defects the client named, and state any residual defect with its measured size instead of claiming perfection.
+
 ## Output Workflow
 
 For each requested image or image set:
@@ -190,3 +214,4 @@ Keep responses practical and design-led:
 - For plans, list each image with size, purpose, visual direction, and copy.
 - For generated files, include the image/file path and a brief quality note.
 - Mention any uncertainty about Amazon category-specific rules or claim substantiation.
+

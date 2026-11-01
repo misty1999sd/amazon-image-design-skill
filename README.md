@@ -40,6 +40,13 @@ When a user provides a product image, the product is treated as the locked sourc
 
 If a generated or edited image changes the product's actual appearance, the result is considered unusable and must be revised.
 
+## Provider Routing And Reference-Locked Rebuild
+
+- If the final image contains visible text, typography, labels or packaging copy, use `gpt-image-2`; text accuracy outranks reference fidelity.
+- If the final image carries no text and the real product must be preserved, use Banana: `nano-banana-pro`, then `nano-banana-2.1`, then `nano-banana-2`.
+- For fidelity-critical rebuilds, `references/product-fidelity-banana-workflow.md` locks the procedure: one attribute per generation, a neutral base image, at most three references, and every prohibition rewritten as a preserved feature or a measurable quantity.
+- `scripts/check_palette.py` is the numeric acceptance gate: green deficit within +-2, `R - B` within +-2.5, border pure-white share >= 0.99, nothing clipped by the frame, true-black ratio >= 0.008, exact requested native canvas size.
+
 ## Repository Structure
 
 ```text
@@ -49,8 +56,11 @@ amazon-image-design-skill/
 |-- README.ja.md
 |-- agents/
 |   `-- openai.yaml
-`-- references/
-    `-- amazon-image-requirements.md
+|-- references/
+|   |-- amazon-image-requirements.md
+|   `-- product-fidelity-banana-workflow.md
+`-- scripts/
+    `-- check_palette.py
 ```
 
 ## Installation

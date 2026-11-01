@@ -40,6 +40,13 @@ Amazon Image Design Skill は、Amazon 商品画像とEC向け商品ビジュア
 
 生成または編集された画像で商品の実際の外観が変わった場合、その出力は使用不可とみなし、修正が必要です。
 
+## プロバイダー選択とリファレンス固定リビルド
+
+- 最終画像に文字、タイポグラフィ、ラベル、パッケージ表記が入る場合は `gpt-image-2` を使用します。文字の正確さはリファレンス再現性より優先します。
+- 最終画像に文字がなく、実商品の外観保持が重要な場合は Banana を使用します（`nano-banana-pro` → `nano-banana-2.1` → `nano-banana-2` の順）。
+- 外観保持が最重要の再構築では `references/product-fidelity-banana-workflow.md` に手順を固定しています。1回の生成で変更する属性は1つ、ベース画像は色かぶりのないもの、参照画像は最大3枚、禁止事項は「保持する特徴」または測定可能な数値に書き換えます。
+- `scripts/check_palette.py` が数値受け入れゲートです。緑の不足 +-2 以内、`R - B` +-2.5 以内、外周の純白率 0.99 以上、フレーム外への欠けなし、純黒比率 0.008 以上、指定どおりのネイティブ解像度。
+
 ## リポジトリ構成
 
 ```text
@@ -49,8 +56,11 @@ amazon-image-design-skill/
 |-- README.ja.md
 |-- agents/
 |   `-- openai.yaml
-`-- references/
-    `-- amazon-image-requirements.md
+|-- references/
+|   |-- amazon-image-requirements.md
+|   `-- product-fidelity-banana-workflow.md
+`-- scripts/
+    `-- check_palette.py
 ```
 
 ## インストール
