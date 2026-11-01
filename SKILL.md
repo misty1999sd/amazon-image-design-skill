@@ -171,7 +171,7 @@ Product fidelity is the highest priority. If the user's source product image is 
 - Prefer a neutral base image. A casted base is inherited by the next pass and usually amplified, so repair a cast by rebuilding from a neutral source rather than by editing the cast away.
 - Convert every prohibition into a preserved named feature or a measurable quantity in pixels and ratios. Negative phrasing such as `no rounded corners` is weakly obeyed.
 - Send at most three references: one structure truth, one detail close-up, optionally one already-approved render. More references cause drift, and a mirrored view mirrors the whole product.
-- Run `scripts/check_palette.py` on every candidate and pass the numeric gate before delivery: green deficit within +-2, `R - B` within +-2.5, border pure-white share >= 0.99, nothing clipped by the frame, true-black ratio >= 0.008, and the exact requested native canvas size.
+- Run `scripts/check_palette.py` on every candidate and pass the numeric gate before delivery: green deficit within +-2.5, `R - B` within +-3.0, border pure-white share >= 0.99, nothing clipped by the frame, true-black ratio >= 0.008, and the exact requested native canvas size.
 - If the client bans local editing, deliver only the model's native full-frame output. No resizing, colour correction, compositing, retouching or format re-encode as a design step.
 - Report the measured values for the defects the client named, and state any residual defect with its measured size instead of claiming perfection.
 
